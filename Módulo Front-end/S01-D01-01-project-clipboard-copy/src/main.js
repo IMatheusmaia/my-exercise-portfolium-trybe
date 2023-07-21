@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import copy from 'clipboard-copy';
 import './style.css';
 
 const passwordBtnEl = document.querySelector('button');
@@ -7,3 +8,8 @@ passwordBtnEl.addEventListener('click', () => {
   const randomPassword = nanoid();
   displayPasswordEl.innerHTML = randomPassword;
 });
+displayPasswordEl.addEventListener('click', (event) => {
+  const pass = event.target.innerHTML
+  copy(pass);
+  alert('Senha copiada para área de transferência')
+} )
