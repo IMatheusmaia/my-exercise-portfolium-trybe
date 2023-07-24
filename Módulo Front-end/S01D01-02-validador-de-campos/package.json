@@ -1,0 +1,21 @@
+{
+  "name": "02.-validador-de-campos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx vite --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "@trybe/eslint-config-frontend": "^1.11.3",
+    "validator": "^13.9.0"
+  }
+}

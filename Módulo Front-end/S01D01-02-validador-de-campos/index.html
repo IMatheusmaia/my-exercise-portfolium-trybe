@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Campos</title>
+    <script src="./src/main.js" type="module" defer></script>
+</head>
+<body>
+    <main>
+        <div class="container--content">
+            <h2>Validador de Campos</h2>
+            <form id='form'>
+                <input type="text" maxlength="
+                40" placeholder="escreva aqui..." id= "info" name="info" required>
+                <select form="form" name="dropdown" id="dropDown">
+                    <option selected >E-mail</option>
+                    <option>Telefone</option>
+                    <option>CPF</option>
+                    <option>CEP</option>
+                    <option>Data de Nascimento</option>
+                </select>
+                <button id="button-submit">Validar</button>
+            </form>
+            <span id="message">Digite um valor, escolha uma opção e clique em validar.</span>
+        </div>
+    </main>
+</body>
+</html>
