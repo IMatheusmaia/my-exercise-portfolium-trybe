@@ -9,7 +9,7 @@ passwordBtnEl.addEventListener('click', () => {
   displayPasswordEl.innerHTML = randomPassword;
 });
 displayPasswordEl.addEventListener('click', (event) => {
-  const pass = event.target.innerHTML
+  const pass = event.target.innerHTML;
   copy(pass);
-  alert('Senha copiada para área de transferência')
-} )
+  alert('Senha copiada para área de transferência');
+});
