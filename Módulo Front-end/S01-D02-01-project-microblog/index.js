@@ -16,14 +16,36 @@ const USERS_API = 'https://dummyjson.com/users';
 const requestUsers = () => {
     fetch(USERS_API)
     .then((response) => response.json())
-    .then((data) => {
-      return fillUsersSelect(data.users);
-    });
+    .then((data) => fillUsersSelect(data.users))
+    .catch((error) => fillErrorMessage(error));
   }
   requestUsers();
 
-usersSelect.addEventListener('change', () => {
-  clearPageData();
+const requestCommentsPost = (posts) => {
+  const principalPost = document.querySelector('#featured-post-title').innerHTML;
+  posts.map((post) => {
+    const { id, title } = post;
+    if (title === principalPost) {
+      fetch(`https://dummyjson.com/posts/${id}/comments`)
+      .then((response) => response.json())
+      .then((data) => fillFeaturedPostComments(data.comments))
+      .catch((error) => fillErrorMessage(error));
+    }
+  })
+}
 
-  // faça a lógica para pegar as informações dos posts da pessoa selecionada e dos comentários do post destacado aqui.
+const requestPostById = (id) => {
+fetch(`https://dummyjson.com/posts/user/${id}`)
+.then((response) => response.json())
+.then((data) => {
+  const { posts } = data;
+  fillPosts(posts);
+  requestCommentsPost(posts)
+})
+.catch((error) => fillErrorMessage(error));
+};
+
+usersSelect.addEventListener('change', (event) => {
+  clearPageData();
+  requestPostById(event.target.value);
 });
