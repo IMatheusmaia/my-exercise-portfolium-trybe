@@ -14,6 +14,7 @@ export function fillUsersSelect(users) {
     opt.innerText = user.firstName;
     // Adiciona o elemento ao users-select
     usersSelect.appendChild(opt);
+    return undefined;
   });
 }
 
@@ -56,6 +57,7 @@ export function fillPosts(posts) {
     const p = document.createElement('p');
     p.innerText = post.title;
     relatedPostsSection.appendChild(p);
+    return undefined;
   });
 }
 
@@ -79,6 +81,7 @@ export function fillFeaturedPostComments(comments) {
     const p = document.createElement('p');
     p.innerText = comment.body;
     commentsSection.appendChild(p);
+    return undefined;
   });
 }
 
@@ -91,7 +94,7 @@ export function fillErrorMessage(errorMessage) {
   // Remove a classe que escondia o elemento
   errorMessageElement.classList.remove('invisible');
 
-  //Adiciona a mensagem de erro como texto do elemento
+  // Adiciona a mensagem de erro como texto do elemento
   errorMessageElement.innerText = errorMessage;
 }
 
