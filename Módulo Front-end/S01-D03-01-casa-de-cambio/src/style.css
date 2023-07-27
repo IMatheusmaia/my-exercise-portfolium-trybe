@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+body {
+    color: white;
+    background-image: url('./assets/background.png');
+}
+
+.container {
+    width: 90vw;
+    height: 100vh;
+}
