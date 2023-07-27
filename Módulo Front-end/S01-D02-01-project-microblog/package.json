@@ -8,5 +8,6 @@
   },
   "scripts": {
     "dev": "vite --open"
-  }
+  },
+  "type": "module"
 }

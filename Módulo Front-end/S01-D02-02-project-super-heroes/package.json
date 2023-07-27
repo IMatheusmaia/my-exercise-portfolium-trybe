@@ -14,5 +14,6 @@
     "@trybe/eslint-config-frontend": "^1.11.3",
     "sweetalert2": "^11.7.20",
     "vite": "^4.4.7"
-  }
+  },
+  "type": "module"
 }

@@ -13,5 +13,6 @@
   "dependencies": {
     "@trybe/eslint-config-frontend": "^1.11.3",
     "vite": "^4.4.7"
-  }
+  },
+  "type": "module"
 }
