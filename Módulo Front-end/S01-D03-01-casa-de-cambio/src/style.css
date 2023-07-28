@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
 }
@@ -5,9 +7,91 @@
 body {
     color: white;
     background-image: url('./assets/background.png');
+    background-position: center;
+    
 }
 
 .container {
     width: 90vw;
     height: 100vh;
+    margin: 0 auto;
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 2rem;
+    & strong {
+        color: #95EBA8;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Fira Code', monospace;
+}
+
+.search-coin > span {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-coin > form > input, button {
+    font-size: 1rem;
+    padding: 0.3rem;
+    outline: none;
+    border: 0 none;
+    border-radius: 10px;
+    font-family:'Fira Code', monospace;
+}
+
+.search-coin > form > input {
+    width: 100px;
+}
+
+.search-coin > form > button {
+    background-color: #96EB95;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 100%;
+    min-height: 10rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.coin-panel {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.mini-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    padding: 0.3rem;
+    gap: 0.5rem;
+    background-color: #00000033;
+    border-radius: 6px;
+    font-family:'Fira Code', monospace;
 }

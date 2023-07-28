@@ -9,19 +9,19 @@
 <body>
   <div class="container">
     <header>
-        <h2>Casa de Câmbio</h2>
+        <h2>Casa de <strong>Câmbio</strong></h2>
     </header>
     <main>
-        <section>
+        <section class="search-coin">
             <span>Digite a moeda:</span>
             <form>
-                <input type="text" placeholder="USD" required>
-                <button type="submit">Pesquisar</button>
+                <input id="input-coin" type="text" placeholder="USD" required>
+                <button type="submit" id="search-button">Pesquisar</button>
             </form>
         </section>
         <section>
-            <div>
-                aqui o painel
+            <div class="panel">
+                <div class="coin-panel"></div>
             </div>
         </section>
     </main>
